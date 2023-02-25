@@ -132,86 +132,93 @@
     <main>
 
         <!-- Selection bar -->
+        <div class="container bgHome">
+            <div class="row d-flex">
+                <div class="check  col m-3 pt-1 justify-content-between">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">Category</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">Category</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">Category</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+                        <label class="form-check-label" for="inlineCheckbox4">Category</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+                        <label class="form-check-label" for="inlineCheckbox5">Category</label>
+                    </div>
+                </div>
+                <form class="g-2 col-sm- col-md-5  justify-content-end">
+                    <div class="input-group  mb-3">
+                        <input type="text" class="form-control" placeholder="Recipient's username"
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </form>
 
-        <div class="container-fluid ccards row  g-0 justify-content-end ">
-
-            <div class="check  col m-3 pt-1 justify-content-center">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">Category</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                    <label class="form-check-label" for="inlineCheckbox2">Category</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                    <label class="form-check-label" for="inlineCheckbox3">Category</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
-                    <label class="form-check-label" for="inlineCheckbox4">Category</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
-                    <label class="form-check-label" for="inlineCheckbox5">Category</label>
-                </div>
             </div>
-            <form class="g-2 col-sm- col-md  justify-content-end">
-
-                <div class="input-group  mb-3">
-                    <input type="text" class="form-control" placeholder="Recipient's username"
-                        aria-label="Recipient's username" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">
-                        <i class="bi bi-search"></i>
-                    </button>
-                </div>
-            </form>
 
         </div>
+
+
 
         <!-- Cards -->
         <section class="cards">
             <div class="card-group p-3 row justify-content-center row-cols-1">
-                <div class="card m-3 col rounded">
+                <div class="card m-3 col rounded bg-secondary">
                     <img src="./assets/img/Cinema.jpg" class="card-img-top rounded" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Titulo</h5>
                         <p class="card-text">Texto Descriptivo</p>
                     </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Precio $10000</small>
+                    <div class="card-footer d-flex justify-content-between">
+                        <p class="align-self-center">Price $10000</p>
+                        <a href="#" class="btn btn-dark">See Info</a>
                     </div>
                 </div>
-                <div class="card m-3 col  rounded">
+                <div class="card m-3 col  rounded bg-secondary">
                     <img src="./assets/img/Food_Fair.jpg" class="card-img-top rounded" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Titulo</h5>
                         <p class="card-text">Texto Descriptivo</p>
+
                     </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
+                    <div class="card-footer d-flex justify-content-between">
+                        <p class="align-self-center">Price $10000</p>
+                        <a href="#" class="btn btn-dark">See Info</a>
                     </div>
                 </div>
-                <div class="card m-3 col rounded">
+                <div class="card m-3 col rounded bg-secondary">
                     <img src="./assets/img/Museum_Tour.jpg" class="card-img-top rounded" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Titulo</h5>
                         <p class="card-text">Texto Descriptivo</p>
                     </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
+                    <div class="card-footer d-flex justify-content-between">
+                        <p class="align-self-center">Price $10000</p>
+                        <a href="#" class="btn btn-dark">See Info</a>
                     </div>
                 </div>
 
-                <div class="card m-3 col rounded">
+                <div class="card m-3 col rounded bg-secondary">
                     <img src="./assets/img/Marathon.jpg" class="card-img-top rounded" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Titulo</h5>
                         <p class="card-text">Texto Descriptivo</p>
                     </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
+                    <div class="card-footer d-flex justify-content-between">
+                        <p class="align-self-center">Price $10000</p>
+                        <a href="#" class="btn btn-dark">See Info</a>
                     </div>
                 </div>
             </div>
@@ -219,7 +226,7 @@
     </main>
 
     <footer>
-        <div class="container-fluid d-inline-flex justify-content-between feet">
+        <div class="container-fluid mt-0 d-inline-flex justify-content-between feet">
             <div>
                 <button type="button" class="btn btn-primary btn-sm rounded-5">
                     <i class="bi bi-instagram"></i>

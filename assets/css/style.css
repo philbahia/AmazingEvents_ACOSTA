@@ -15,19 +15,27 @@ html {
 }
 
 body {
-     background-color: rgb(21, 139, 27);
-}
-main{
-    min-height: 70%;
+    background-color: rgb(21, 139, 27);
 }
 
-footer{
+main {
+    min-height: 70%;
+    background-color: rgb(57, 48, 83);
+    border: 1px solid rgb(49, 49, 49);
+}
+
+footer {
     background-color: blueviolet;
 }
+
 .navbar {
     border: 1px solid rgb(83, 82, 82);
     background-color: rgb(24, 18, 43);
-   
+
+}
+.navbar-toggler{
+    background-color: rgb(83, 67, 138);
+
 }
 
 header {
@@ -41,7 +49,7 @@ header {
     margin-top: 0;
 }
 
-.carousel{
+.carousel {
     width: 100%;
     height: 10%;
 }
@@ -63,32 +71,41 @@ header {
 
 }
 
-.detailcard{
+.detailcard {
     max-height: 100%;
     background-color: rgb(57, 48, 83);
     border: 1px solid rgb(49, 49, 49);
 }
 
+.check{
+    color: antiquewhite;
+}
 .cards {
-    background-color: rgb(209, 204, 204);
-
-
+    background-color: rgb(57, 48, 83);
+    border: 1px solid rgb(49, 49, 49);
 }
 
 .card-img-top {
     height: 100%;
     width: auto;
     margin-top: .5rem;
-    
+
 
 }
-.cardDetail-img{
+
+.cardDetail-img {
     height: 60vh;
     max-width: 100%;
     box-shadow: 10px 5px 5px rgb(49, 49, 49);
 
 }
 
+.card-img-top {
+    height: 35vh;
+    max-width: 100%;
+    box-shadow: 10px 5px 5px rgb(49, 49, 49);
+
+}
 
 
 
@@ -107,19 +124,42 @@ svg text {
     svg text {
         font-size: 18px;
     }
+    .table{
+        font-size: .5rem;
+    }
+}
+@media (min-width: 500px){
+    .table{
+        font-size: 1rem;
+    }
 }
 
-td{
-    border: 1px solid blue;
+
+td {
+    padding: .1rem;
+  
 }
 
-table {
-    table-layout: auto;
-    width: 100%;
-    border: 1px solid red;
-    padding: 1rem;
-  }
+tr {
+    border: 1px solid rgb(136, 5, 44);
+    padding: 1px;
+}
 
-tblStat{
+thead{
+    background-color: rgb(138, 135, 135);
+}
+tblStat {
     margin: 1rem;
+}
+
+.table{
+    table-layout: fixed;
+    font-size: 1rem;
+}
+.table>caption {
+    border: 1px solid rgb(243, 243, 247);
+    background-color: rgb(34, 34, 33);
+    color: antiquewhite;
+    padding-left: .5rem;
+
 }
