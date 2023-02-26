@@ -31,13 +31,10 @@ footer {
 .navbar {
     border: 1px solid rgb(83, 82, 82);
     background-color: rgb(24, 18, 43);
-    
+
 
 }
-.navbar-toggler {
-    background-color: rgb(174, 164, 192);
-    color: yellow;
-}
+
 header {
     margin-bottom: 0;
     margin-top: 0;
@@ -75,15 +72,16 @@ header {
 .detailcard {
     max-height: 100%;
     background-color: rgb(57, 48, 83);
-    border: 1px solid rgb(49, 49, 49);
+    border: 1px solid rgb(57, 48, 83);
 }
 
-.check{
+.check {
     color: antiquewhite;
 }
+
 .cards {
     background-color: rgb(57, 48, 83);
-    border: 1px solid rgb(49, 49, 49);
+    border: 0 1px solid rgb(49, 49, 49);
 }
 
 .card-img-top {
@@ -92,6 +90,10 @@ header {
     margin-top: .5rem;
 
 
+}
+
+.cards h5 {
+    font-weight: bold;
 }
 
 .cardDetail-img {
@@ -125,12 +127,14 @@ svg text {
     svg text {
         font-size: 18px;
     }
-    .table{
+
+    .table {
         font-size: .5rem;
     }
 }
-@media (min-width: 500px){
-    .table{
+
+@media (min-width: 500px) {
+    .table {
         font-size: 1rem;
     }
 }
@@ -138,7 +142,7 @@ svg text {
 
 td {
     padding: .1rem;
-  
+
 }
 
 tr {
@@ -146,17 +150,19 @@ tr {
     padding: 1px;
 }
 
-thead{
+thead {
     background-color: rgb(138, 135, 135);
 }
+
 tblStat {
     margin: 1rem;
 }
 
-.table{
+.table {
     table-layout: fixed;
     font-size: 1rem;
 }
+
 .table>caption {
     border: 1px solid rgb(243, 243, 247);
     background-color: rgb(34, 34, 33);
@@ -165,8 +171,34 @@ tblStat {
 
 }
 
-.slider{
+.slider {
     padding: 1rem;
     color: rgb(182, 187, 192);
-   
+
+}
+
+.contact div {
+    box-shadow: 5px 5px 5px rgb(131, 126, 126);
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(112, 92, 184);
+
+}
+
+.contact input,
+.contact textarea {
+    background-color: rgb(186, 186, 248);
+}
+
+.btnsub {
+    border: 1px solid rgb(42, 12, 126);
+    background-color: rgb(100, 100, 187);
+    box-shadow: 5px 5px 5px rgb(71, 52, 121);
+    padding: .5rem;
+    border-radius: 5px;
+}
+
+#btn-sub {
+    border: 0;
+    box-shadow: none;
 }
