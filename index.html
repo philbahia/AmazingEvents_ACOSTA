@@ -21,8 +21,9 @@
                     <img src="./assets/img/LogoAmazingEvents.png" alt="Logo" height="24"
                         class="d-inline-block align-text-top">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -43,87 +44,28 @@
                         <li class="nav-item p-2">
                             <a class="btn btn-secondary" href="./assets/pages/stats.html">Stats</a>
                         </li>
-                        <li class="nav-item p-2">
-                            <a class="btn btn-secondary" href="./assets/pages/details.html">Details</a>
-                        </li>
+
                     </ul>
                 </div>
             </div>
         </nav>
 
         <!-- Carousel-->
+        <div class="container slider">
+            <div class="d-flex justify-content-between">
+                <a href="./assets/pages/stats.html" class="btn btn-trasparent btn-lg" tabindex="-1" role="button"
+                    aria-disabled="true">
+                    <i class="bi bi-chevron-left"></i>
+                </a>
+                <h2 class="align-self-end">Home</h2>
+                <a class="btn bg-trasparent btn-lg" href="./assets/pages/upcomingEvents.html " tabindex="-1"
+                    role="button" aria-disabled="true">
+                    <i class="bi bi-chevron-right"></i>
+                </a>
 
-
-        <div class="bd-example">
-            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="10000">
-                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="100"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Primer slide"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#f5f5f5"></rect>
-                            <text x="50%" y="50%" fill="#aaa" dy=".3em" text-anchor="middle">Home</text>
-                        </svg>
-
-                    </div>
-                    <div class="carousel-item" data-bs-interval="2000">
-                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="100"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Segundo slide"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#eee"></rect>
-                            <text x="50%" y="50%" fill="#bbb" dy=".3em" text-anchor="middle">Upcoming
-                                Events</text>
-                        </svg>
-
-                    </div>
-                    <div class="carousel-item">
-                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="100"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Tercer slide"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#e5e5e5"></rect>
-                            <text x="50%" y="50%" fill="#999" dy=".3em" text-anchor="middle">Past
-                                Events</text>
-                        </svg>
-
-                    </div>
-                    <div class="carousel-item">
-                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="100"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Cuarto slide"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#e5e5e5"></rect>
-                            <text x="50%" y="50%" fill="#999" dy=".3em" text-anchor="middle">Contact</text>
-                        </svg>
-
-                    </div>
-                    <div class="carousel-item">
-                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="100"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Quinto slide"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#e5e5e5"></rect>
-                            <text x="50%" y="50%" fill="#999" dy=".3em" text-anchor="middle">Stats</text>
-                        </svg>
-
-                    </div>
-
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
             </div>
         </div>
+
 
 
 
@@ -156,8 +98,8 @@
                         <label class="form-check-label" for="inlineCheckbox5">Category</label>
                     </div>
                 </div>
-                <form class="g-2 col-sm- col-md-5  justify-content-end">
-                    <div class="input-group  mb-3">
+                <form class="g-2 col-sm col-md-5  justify-content-end">
+                    <div class="input-group  mt-1 mb-3">
                         <input type="text" class="form-control" placeholder="Recipient's username"
                             aria-label="Recipient's username" aria-describedby="button-addon2">
                         <button class="btn btn-outline-secondary" type="button" id="button-addon2">
@@ -178,18 +120,18 @@
                 <div class="card m-3 col rounded bg-secondary">
                     <img src="./assets/img/Cinema.jpg" class="card-img-top rounded" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Titulo</h5>
-                        <p class="card-text">Texto Descriptivo</p>
+                        <h5 class="card-title">Amazing Movies</h5>
+                        <p class="card-text">The best sensation. Rooms with special sound. Amazing effects.</p>
                     </div>
                     <div class="card-footer d-flex justify-content-between">
                         <p class="align-self-center">Price $10000</p>
-                        <a href="#" class="btn btn-dark">See Info</a>
+                        <a href="./assets/pages/details.html" class="btn btn-dark">See Info</a>
                     </div>
                 </div>
                 <div class="card m-3 col  rounded bg-secondary">
                     <img src="./assets/img/Food_Fair.jpg" class="card-img-top rounded" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Titulo</h5>
+                        <h5 class="card-title">Food Tour</h5>
                         <p class="card-text">Texto Descriptivo</p>
 
                     </div>
@@ -228,13 +170,13 @@
     <footer>
         <div class="container-fluid mt-0 d-inline-flex justify-content-between feet">
             <div>
-                <button type="button" class="btn btn-primary btn-sm rounded-5">
+                <button type="button" class="btn btn-danger btn-sm rounded-5">
                     <i class="bi bi-instagram"></i>
                 </button>
-                <button type="button" class="btn btn-secondary btn-sm rounded-5">
+                <button type="button" class="btn btn-primary btn-sm rounded-5">
                     <i class="bi bi-facebook"></i>
                 </button>
-                <button type="button" class="btn btn-secondary btn-sm rounded-5">
+                <button type="button" class="btn btn-success btn-sm rounded-5">
                     <i class="bi bi-whatsapp rounded-2"></i>
                 </button>
             </div>

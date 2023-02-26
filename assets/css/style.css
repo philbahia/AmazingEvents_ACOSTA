@@ -31,16 +31,17 @@ footer {
 .navbar {
     border: 1px solid rgb(83, 82, 82);
     background-color: rgb(24, 18, 43);
+    
 
 }
-.navbar-toggler{
-    background-color: rgb(83, 67, 138);
-
+.navbar-toggler {
+    background-color: rgb(174, 164, 192);
+    color: yellow;
 }
-
 header {
     margin-bottom: 0;
     margin-top: 0;
+    background-color: rgb(99, 89, 133);
 }
 
 .navbar-collapse {
@@ -162,4 +163,10 @@ tblStat {
     color: antiquewhite;
     padding-left: .5rem;
 
+}
+
+.slider{
+    padding: 1rem;
+    color: rgb(182, 187, 192);
+   
 }

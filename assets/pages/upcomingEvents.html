@@ -15,7 +15,7 @@
 <body>
     <header>
         <!-- Navigatiob Bar -->
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar navbar-expand-lg bg-dark.bg-gradient">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="../img/LogoAmazingEvents.png" alt="Logo" height="24"
@@ -49,74 +49,18 @@
         </nav>
 
         <!-- Carousel-->
-        <div class="bd-example">
-            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="container slider">
+            <div class="d-flex justify-content-between">
+                <a href="/index.html" class="btn btn-trasparent btn-lg" tabindex="-1" role="button"
+                    aria-disabled="true" aria-placeholder="Home">
+                    <i class="bi bi-chevron-left"></i>
+                </a>
+                <h2 class="align-self-end">Upcoming Events</h2>
+                <a class="btn bg-trasparent btn-lg" href="./pastEvents.html " tabindex="-1"
+                    role="button" aria-disabled="true" aria-placeholder="Past Events">
+                    <i class="bi bi-chevron-right"></i>
+                </a>
 
-                <div class="carousel-inner">
-                    <div class="carousel-item" data-bs-interval="2000">
-                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="100"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Primer slide"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#f5f5f5"></rect>
-                            <text x="50%" y="50%" fill="#aaa" dy=".3em" text-anchor="middle">Home</text>
-                        </svg>
-
-                    </div>
-                    <div class="carousel-item active" data-bs-interval="8000">
-                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="100"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Segundo slide"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#eee"></rect>
-                            <text x="50%" y="50%" fill="#bbb" dy=".3em" text-anchor="middle">Upcoming
-                                Events</text>
-                        </svg>
-
-                    </div>
-                    <div class="carousel-item">
-                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="100"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Tercer slide"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#e5e5e5"></rect>
-                            <text x="50%" y="50%" fill="#999" dy=".3em" text-anchor="middle">Past
-                                Events</text>
-                        </svg>
-
-                    </div>
-                    <div class="carousel-item">
-                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="100"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Cuarto slide"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#e5e5e5"></rect>
-                            <text x="50%" y="50%" fill="#999" dy=".3em" text-anchor="middle">Contact</text>
-                        </svg>
-
-                    </div>
-                    <div class="carousel-item">
-                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="100"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Quinto slide"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#e5e5e5"></rect>
-                            <text x="50%" y="50%" fill="#999" dy=".3em" text-anchor="middle">Stats</text>
-                        </svg>
-
-                    </div>
-
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
             </div>
         </div>
 
@@ -128,85 +72,92 @@
 
         <!-- Selection bar -->
 
-        <div class="container-fluid ccards row  g-0 justify-content-end ">
+        <div class="container bgHome">
+            <div class="row d-flex">
+                <div class="check  col m-3 pt-1 justify-content-between">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">Category</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">Category</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">Category</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+                        <label class="form-check-label" for="inlineCheckbox4">Category</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+                        <label class="form-check-label" for="inlineCheckbox5">Category</label>
+                    </div>
+                </div>
+                <form class="g-2 col-sm col-md-5  justify-content-end">
+                    <div class="input-group  mt-1 mb-3">
+                        <input type="text" class="form-control" placeholder="Recipient's username"
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </form>
 
-            <div class="check  col m-3 pt-1 justify-content-center">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">Category</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                    <label class="form-check-label" for="inlineCheckbox2">Category</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                    <label class="form-check-label" for="inlineCheckbox3">Category</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
-                    <label class="form-check-label" for="inlineCheckbox4">Category</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
-                    <label class="form-check-label" for="inlineCheckbox5">Category</label>
-                </div>
             </div>
-            <form class="g-2 col-sm- col-md  justify-content-end">
-
-                <div class="input-group  mb-3">
-                    <input type="text" class="form-control" placeholder="Recipient's username"
-                        aria-label="Recipient's username" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">
-                        <i class="bi bi-search"></i>
-                    </button>
-                </div>
-            </form>
 
         </div>
+
 
         <!-- Cards -->
         <section class="cards">
             <div class="card-group p-3 row justify-content-center row-cols-1">
-                <div class="card m-3 col rounded">
+                <div class="card m-3 col rounded bg-secondary">
                     <img src="../img/Cinema.jpg" class="card-img-top rounded" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Titulo</h5>
-                        <p class="card-text">Texto Descriptivo</p>
+                        <h5 class="card-title">Amazing Movies</h5>
+                        <p class="card-text">The best sensation. Rooms with special sound. Amazing effects.</p>
                     </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Precio $10000</small>
+                    <div class="card-footer d-flex justify-content-between">
+                        <p class="align-self-center">Price $10000</p>
+                        <a href="./assets/pages/details.html" class="btn btn-dark">See Info</a>
                     </div>
                 </div>
-                <div class="card m-3 col  rounded">
+                <div class="card m-3 col  rounded bg-secondary">
                     <img src="../img/Food_Fair.jpg" class="card-img-top rounded" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Titulo</h5>
+                        <h5 class="card-title">Food Tour</h5>
                         <p class="card-text">Texto Descriptivo</p>
+
                     </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
+                    <div class="card-footer d-flex justify-content-between">
+                        <p class="align-self-center">Price $10000</p>
+                        <a href="#" class="btn btn-dark">See Info</a>
                     </div>
                 </div>
-                <div class="card m-3 col rounded">
-                    <img src="../img/Museum_Tour.jpg" class="card-img-top rounded" alt="...">
+                <div class="card m-3 col rounded bg-secondary">
+                    <img src="../img/Music_Concert.jpg" class="card-img-top rounded" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Titulo</h5>
                         <p class="card-text">Texto Descriptivo</p>
                     </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
+                    <div class="card-footer d-flex justify-content-between">
+                        <p class="align-self-center">Price $10000</p>
+                        <a href="#" class="btn btn-dark">See Info</a>
                     </div>
                 </div>
 
-                <div class="card m-3 col rounded">
-                    <img src="../img/Marathon.jpg" class="card-img-top rounded" alt="...">
+                <div class="card m-3 col rounded bg-secondary">
+                    <img src="../img/Costume_Party.jpg" class="card-img-top rounded" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Titulo</h5>
                         <p class="card-text">Texto Descriptivo</p>
                     </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
+                    <div class="card-footer d-flex justify-content-between">
+                        <p class="align-self-center">Price $10000</p>
+                        <a href="#" class="btn btn-dark">See Info</a>
                     </div>
                 </div>
             </div>
@@ -214,18 +165,19 @@
     </main>
 
     <footer>
-        <div class="container-fluid d-inline-flex justify-content-between feet">
+        <div class="container-fluid mt-0 d-inline-flex justify-content-between feet">
             <div>
-                <button type="button" class="btn btn-primary btn-sm rounded-5">
+                <button type="button" class="btn btn-danger btn-sm rounded-5">
                     <i class="bi bi-instagram"></i>
                 </button>
-                <button type="button" class="btn btn-secondary btn-sm rounded-5">
+                <button type="button" class="btn btn-primary btn-sm rounded-5">
                     <i class="bi bi-facebook"></i>
                 </button>
-                <button type="button" class="btn btn-secondary btn-sm rounded-5">
+                <button type="button" class="btn btn-success btn-sm rounded-5">
                     <i class="bi bi-whatsapp rounded-2"></i>
                 </button>
             </div>
+
             <div>
                 <span class="p-2 align-middle fs-4">FE11-TM</span>
             </div>
