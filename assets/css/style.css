@@ -83,15 +83,6 @@ header {
     background-color: rgb(57, 48, 83);
     border: 1px solid rgb(49, 49, 49);
 }
-
-.card-img-top {
-    height: 100%;
-    width: auto;
-    margin-top: .5rem;
-
-
-}
-
 .cards h5 {
     font-weight: bold;
 }
@@ -100,17 +91,15 @@ header {
     height: 60vh;
     max-width: 100%;
     box-shadow: 10px 5px 5px rgb(49, 49, 49);
-
 }
 
 .card-img-top {
     height: 35vh;
     max-width: 100%;
+    margin-top: .5rem;
+    object-fit: cover;
     box-shadow: 10px 5px 5px rgb(49, 49, 49);
-
 }
-
-
 
 .icons {
     margin: .5rem;
@@ -142,7 +131,6 @@ svg text {
 
 td {
     padding: .1rem;
-
 }
 
 tr {
