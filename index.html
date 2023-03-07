@@ -78,6 +78,15 @@
         <div class="container bgHome">
             <div class="row d-flex">
                 <div class="check  col m-3 pt-1 justify-content-between">
+
+                    <!-- Template category 
+                    <template id="tplcat">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="" value="">
+                            <label class="form-check-label" for="">Category</label>
+                        </div>
+                    </template>-->
+
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
                         <label class="form-check-label" for="inlineCheckbox1">Category</label>
@@ -98,6 +107,7 @@
                         <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
                         <label class="form-check-label" for="inlineCheckbox5">Category</label>
                     </div>
+
                 </div>
                 <form class="g-2 col-sm col-md-5  justify-content-end">
                     <div class="input-group  mt-1 mb-3">
@@ -116,61 +126,31 @@
 
 
         <!-- Cards -->
-        <section class="cards">
-            <div class="card-group p-3 row justify-content-center row-cols-1">
-                <div class="card m-3 col rounded bg-secondary">
-                    <img src="./assets/img/Cinema.jpg" id="card1-img" class="card-img-top rounded" alt="cinema">
-                    <div class="card-body">
-                        <h5 id="card1-h5" class="card-title">Amazing Movies</h5>
-                        <p id="card1-p" class="card-text">Generation of sensory effects of rain, wind, impacts, movement, smells, fog
-                            or light to fully immerse ourselves in the world recreated by the movies.</p>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between">
-                        <p id="card1-price" class="align-self-center">Price $10000</p>
-                        <a href="./assets/pages/details.html" class="btn btn-dark">See Info</a>
-                    </div>
-                </div>
-                <div class="card m-3 col  rounded bg-secondary">
-                    <img src="./assets/img/Food_Fair.jpg" class="card-img-top rounded" alt="food">
-                    <div class="card-body">
-                        <h5 class="card-title">Food Tours</h5>
-                        <p class="card-text">We specialize in
-                            designing unforgettable trips based on your individual interests and travel styles. We’d
-                            love to get to know you!</p>
+        <div class="cards">
+            <div id="cardMain" class="card-group p-3 row row-cols-md-4
+                 g-3 mb-4  justify-content-center">
 
+                <!-- Template Card -->
+                <template id="card-tpl">
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="card h-100 m-1 rounded-3 bg-custom-1 border-dark">
+                            <img src="${image}" class="card-img-top rounded" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text"></p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between">
+                                <p class="card-price align-self-center">${price}</p>
+                                <a href="./assets/pages/details.html" class="btn btn-dark">See Info</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-footer d-flex justify-content-between">
-                        <p class="align-self-center">Price $10000</p>
-                        <a href="./assets/pages/details.html" class="btn btn-dark">See Info</a>
-                    </div>
-                </div>
-                <div class="card m-3 col rounded bg-secondary">
-                    <img src="./assets/img/Museum_Tour.jpg" class="card-img-top rounded" alt="museum">
-                    <div class="card-body">
-                        <h5 class="card-title">Jurassic Experience</h5>
-                        <p class="card-text">See the Field Museum in a whole new light! Families and groups with kids
-                            ages 6 to 12 can spend the night at the museum during Dozin’ with the Dinos.</p>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between">
-                        <p class="align-self-center">Price $10000</p>
-                        <a href="./assets/pages/details.html" class="btn btn-dark">See Info</a>
-                    </div>
-                </div>
+                </template>
 
-                <div class="card m-3 col rounded bg-secondary">
-                    <img src="./assets/img/Marathon.jpg" class="card-img-top rounded" alt="marathon">
-                    <div class="card-body">
-                        <h5 class="card-title">Marathon Majors</h5>
-                        <p class="card-text">The circuit of the six most spectacular and massive marathons in the world.
-                            For both amateurs and professionals, it is a very big dream to race in these big cities.</p>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between">
-                        <p class="align-self-center">Price $10000</p>
-                        <a href="./assets/pages/details.html" class="btn btn-dark">See Info</a>
-                    </div>
-                </div>
+
+
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
@@ -197,9 +177,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-        
-        <script type="module" src="./assets/scripts/amazing.js"></script>
-        <script type="module" src="./assets/scripts/index.js"></script>
+
+    <script type="module" src="./assets/scripts/amazing.js"></script>
+    <script type="module" src="./assets/scripts/index.js"></script>
 </body>
 
 

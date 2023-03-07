@@ -113,59 +113,31 @@
 
         <!-- Cards -->
         <section class="cards">
-            <div class="card-group p-3 row justify-content-center row-cols-1">
-                <div class="card m-3 col rounded bg-secondary">
-                    <img src="../img/Cinema.jpg" class="card-img-top rounded" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Amazing Movies</h5>
-                        <p class="card-text">Generation of sensory effects of rain, wind, impacts, movement, smells, fog
-                            or light to fully immerse ourselves in the world recreated by the movies.</p>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between">
-                        <p class="align-self-center">Price $10000</p>
-                        <a href="../pages/details.html" class="btn btn-dark">See Info</a>
-                    </div>
-                </div>
-                <div class="card m-3 col  rounded bg-secondary">
-                    <img src="../img/Food_Fair.jpg" class="card-img-top rounded" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Food Tour</h5>
-                        <p class="card-text">We specialize in
-                            designing unforgettable trips based on your individual interests and travel styles. We’d
-                            love to get to know you!</p>
+            <div id="cardMain" class="card-group p-3 row  row-cols-md-4 g-3 mb-4  justify-content-center">
 
+                <!-- Template Card -->
+                <template id="card-tpl">
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="card h-100 m-1 rounded-3 bg-custom-1 border-dark">
+                            <img src="${image}" class="card-img-top rounded" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text">${description} </p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between">
+                                <p class="card-price align-self-center">${price}</p>
+                                <a href="../pages/details.html" class="btn btn-dark">See Info</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-footer d-flex justify-content-between">
-                        <p class="align-self-center">Price $10000</p>
-                        <a href="../pages/details.html" class="btn btn-dark">See Info</a>
-                    </div>
-                </div>
-                <div class="card m-3 col rounded bg-secondary">
-                    <img src="../img/Music_Concert.jpg" class="card-img-top rounded" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Music Concert Festival</h5>
-                        <p class="card-text">The music lifts you together, and you feel connected to them all. That’s
-                            the power of music. And that’s the singular experience of a music festival.</p>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between">
-                        <p class="align-self-center">Price $10000</p>
-                        <a href="../pages/details.html" class="btn btn-dark">See Info</a>
-                    </div>
-                </div>
+                </template>
 
-                <div class="card m-3 col rounded bg-secondary">
-                    <img src="../img/Costume_Party.jpg" class="card-img-top rounded" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Festival Costumes</h5>
-                        <p class="card-text">The most extravagant and exclusive costumes.</p>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between">
-                        <p class="align-self-center">Price $10000</p>
-                        <a href="../pages/details.html" class="btn btn-dark">See Info</a>
-                    </div>
-                </div>
+
+
             </div>
         </section>
+
+
     </main>
 
     <footer>

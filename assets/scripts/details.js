@@ -11,3 +11,5 @@ let imgCardDetail = document.getElementById("bigcard")
 
 imgCardDetail.src = imagen;
 
+const prueba = data.events;
+console.table(prueba);
