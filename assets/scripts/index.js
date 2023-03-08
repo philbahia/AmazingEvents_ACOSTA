@@ -1,22 +1,5 @@
 import data from "./amazing.js"
 
-
-const date_today = data.currentDate;
-console.log(date_today);
-
-//desestructura object data
-let { events } = data;
-//creamos array de objetos events
-console.log("array eventos");
-console.log(events);
-
-let homeEvents = events.filter(ep => ep.date !== date_today);
-
-
-console.log("array eventos filtrado");
-console.table(homeEvents);
-
-
 function removeDuplicates(originalArray, prop) {
     let newArray = [];
     let lookupObject = {};
@@ -31,19 +14,21 @@ function removeDuplicates(originalArray, prop) {
     return newArray;
 }
 
+const date_today = data.currentDate;
+const { events } = data;
+
+//filtrar array de objetos events
+
+let homeEvents = events.filter(ep => ep.date !== date_today);
+
+
+// *****************************************************
 let category = removeDuplicates(homeEvents, "category");
 
 
-//*******************************
 
-console.log("Categorias");
-console.table(category);
-
-//category.forEach(event =>{
-//  const id = "inlineCheckbox-${category._id}";
-
-//})
-// ******************************
+// *******************************
+// *******************************
 const contcard = document.querySelector("#cardMain");
 const template = document.querySelector('#card-tpl').content;
 const fragment = document.createDocumentFragment();
