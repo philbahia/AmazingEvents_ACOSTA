@@ -200,3 +200,7 @@ tblStat {
 .bg-custom-1 {
  background-color: rgba(129, 120, 156, 0.973)!important;
 }
+
+.form-check{
+    font-size: .9rem;
+}
