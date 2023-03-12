@@ -19,6 +19,7 @@ function fillcard(arrayfill) {
         template.querySelector('.card-title').textContent = event.name;
         template.querySelector('.card-text').textContent = event.description;
         template.querySelector('.card-price').textContent = "$ " + event.price;
+        template.querySelector('.btndetail').href = "./assets/pages/details.html?id="+ event._id;
         const clone = template.cloneNode(true);
         fragment.appendChild(clone);
 

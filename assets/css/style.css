@@ -90,8 +90,10 @@ header {
 }
 
 .cardDetail-img {
-    height: 60vh;
+    height: 65vh;
     max-width: 100%;
+    align-self: center;
+    object-fit: cover ;
     box-shadow: 10px 5px 5px rgb(49, 49, 49);
 }
 
