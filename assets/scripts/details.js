@@ -27,7 +27,7 @@ const fragment = document.createDocumentFragment();
 Object.entries(fichas).forEach( ([key, value])=> {
 
     let subtitle = key.charAt(0).toUpperCase().concat(key.substring(1, key.length));
-    template.querySelector('.dtl-li').textContent = subtitle + ": " + value;
+    template.querySelector('.dtl-li').textContent = key         + ": " + value;
     
     let clondetail = template.cloneNode(true);
     fragment.appendChild(clondetail);
