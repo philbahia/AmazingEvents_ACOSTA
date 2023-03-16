@@ -206,3 +206,10 @@ tblStat {
 .form-check{
     font-size: .9rem;
 }
+
+.message{
+    border: 1px solid bisque;
+    border-radius: 10px;
+    background-color: rgb(10, 51, 78);
+    box-shadow: 5px 5px 5px rgb(112, 98, 148);;
+}

@@ -75,28 +75,16 @@
         <div class="container bgHome">
             <div class="row d-flex">
                 <div class="check  col m-3 pt-1 justify-content-between">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                        <label class="form-check-label" for="inlineCheckbox1">Category</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox2">Category</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                        <label class="form-check-label" for="inlineCheckbox3">Category</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
-                        <label class="form-check-label" for="inlineCheckbox4">Category</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
-                        <label class="form-check-label" for="inlineCheckbox5">Category</label>
-                    </div>
+                    
+                    <!-- Template checkgroup category-->
+                    <template id="tplcat">
+                        <div class="form-check form-check-inline ">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label" for=""></label>
+                        </div>
+                    </template>
                 </div>
-                <form class="g-2 col-sm col-md-5  justify-content-end">
+                <form class="g-2 col-3  justify-content-end">
                     <div class="input-group  mt-1 mb-3">
                         <input type="text" class="form-control" placeholder="" aria-label="Recipient's username"
                             aria-describedby="button-addon2">
@@ -117,7 +105,7 @@
 
                 <!-- Template Card -->
                 <template id="card-tpl">
-                    <div class="col-12 col-md-4 col-lg-3">
+                    <div class="cardmodel col-12 col-md-4 col-lg-3">
                         <div class="card h-100 m-1 rounded-3 bg-custom-1 border-dark">
                             <img src="${image}" class="card-img-top rounded" alt="">
                             <div class="card-body">
@@ -126,7 +114,7 @@
                             </div>
                             <div class="card-footer d-flex justify-content-between">
                                 <p class="card-price align-self-center">${price}</p>
-                                <a href="../pages/details.html" class="btn btn-dark">See Info</a>
+                                <a href="./details.html" id="bt-detailb" class="btn btn-dark">See Info</a>
                             </div>
                         </div>
                     </div>
@@ -165,6 +153,7 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
 
+    <script type="module" src="../scripts/functions.js"></script>
     <script type="module" src="../scripts/upcomingEvents.js"></script>
     <script type="module" src="../scripts/amazing.js"></script>
 
