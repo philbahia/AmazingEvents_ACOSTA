@@ -1,7 +1,8 @@
-import data from "./amazing.js"
-import { searchChk, searchInput, createCB, fillcard, filtering } from "./functions.js"
+//import data from "./amazing.js"
+import { searchChk, searchInput, createCB, fillcard, filtering, downData } from "./functions.js"
 
 
+const data = await downData();
 
 
 const fragment = document.createDocumentFragment();

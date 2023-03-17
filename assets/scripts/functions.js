@@ -1,4 +1,3 @@
-import data from "./amazing.js"
 
 async function downData() {
     let data = await fetch("/assets/data/amazing.json")

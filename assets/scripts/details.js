@@ -1,4 +1,7 @@
-import data from "./amazing.js";
+//import data from "./amazing.js";
+
+
+const data = await downData();
 
 
 let date_today = data.currentDate;
