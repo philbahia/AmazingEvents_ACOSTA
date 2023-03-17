@@ -1,5 +1,6 @@
 import data from "./amazing.js";
 
+
 let date_today = data.currentDate;
 let { events } = data;
 const detailEvents = events.filter(ep => Date.parse(ep.date) !== Date.parse(date_today));

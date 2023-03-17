@@ -1,5 +1,14 @@
 import data from "./amazing.js"
 
+async function downData() {
+    let data = await fetch("/assets/data/amazing.json")
+        .then(response => response.json())
+        .then(data => {
+            return data;
+        })
+        
+    return data    
+}
 
 function searchChk(array) {
 
@@ -24,16 +33,15 @@ function searchChk(array) {
 
 
 function searchInput(array, word) {
-    console.log("array search input");
+   
     let hetFilter = array.filter(ep => ep.name.toLowerCase().includes(word));
-    console.log(hetFilter)
+    
     return hetFilter;
 }
 
 function createCB(array, contiene) {
 
-    console.log(array);
-    console.log(contiene);
+    
     const pltcategory = document.querySelector("#tplcat").content; //template checkbox
     const fragcheck = document.createDocumentFragment();
 
@@ -62,8 +70,9 @@ function fillcard(arrayfill) {
     const contcard = document.querySelector("#cardMain");
 
     if (arrayfill.length == 0) {
-        console.log("no coincidencias")
-        contcard.innerHTML = `<h2 class="display-1 fw-bolder">No hay coincidencias</h2>`
+        contcard.innerHTML = `<div class="message p-2"><h3 class="border p-2 fw-bolder text-primary-emphasis text-center">There is no match</h3>
+        <h2 class="border text-center text-primary"> Please refine your search</h2></div>`
+
         return
     }
 
@@ -138,4 +147,4 @@ function filtering(arrayhome, texto) {
 
 }
 
-export { searchChk, searchInput, createCB, fillcard, fillcardb, filtering }
+export { searchChk, searchInput, createCB, fillcard, fillcardb, filtering, downData }

@@ -2,6 +2,8 @@ import data from "./amazing.js"
 import { searchChk, searchInput, createCB, fillcard, filtering } from "./functions.js"
 
 
+
+
 const fragment = document.createDocumentFragment();
 const template = document.querySelector('#card-tpl').content; //template card
 const fcheck = document.querySelector(".check"); //contenedor checkbox
@@ -13,8 +15,7 @@ let txtinput = insearch.value.toLowerCase();
 let date_today = data.currentDate;
 const homeEvents = data.events;
 
-console.log("txtinput");
-console.log(insearch);
+
 
 
 insearch.addEventListener('keyup', () => {
