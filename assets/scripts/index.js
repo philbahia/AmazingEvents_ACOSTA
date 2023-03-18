@@ -24,7 +24,7 @@ insearch.addEventListener('keyup', () => {
     txtinput = insearch.value.toLowerCase();
 
     let hetFilter = filtering(homeEvents, txtinput);
-    fillcard(hetFilter);
+    fillcard(hetFilter, template);
 
 });
 
@@ -32,10 +32,10 @@ insearch.addEventListener('keyup', () => {
 fcheck.addEventListener('change', () => {
 
     let chksfilter = filtering(homeEvents, txtinput);
-    fillcard(chksfilter);
+    fillcard(chksfilter,template);
 });
 
 createCB(homeEvents, fcheck);
-fillcard(homeEvents);
+fillcard(homeEvents,template);
 
 

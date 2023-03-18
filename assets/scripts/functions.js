@@ -64,8 +64,8 @@ function createCB(array, contiene) {
 
 }
 
-const template = document.querySelector('#card-tpl').content;
-function fillcard(arrayfill) {
+function fillcard(arrayfill, template) {
+    //const template = document.querySelector('#card-tpl').content;
     const contcard = document.querySelector("#cardMain");
 
     if (arrayfill.length == 0) {
@@ -95,8 +95,8 @@ function fillcard(arrayfill) {
     contcard.appendChild(fragment);
 }
 
-function fillcardb(arrayfill) {
-
+function fillcardb(arrayfill,template) {
+    //const template = document.querySelector('#card-tpl').content;
     let contcard = document.querySelector("#cardMain");
     if (arrayfill.length == 0) {
         console.log("no coincidencias")

@@ -1,6 +1,8 @@
-import data from "./amazing.js"
-import { searchChk, searchInput, createCB, fillcardb, filtering } from "./functions.js"
+//import data from "./amazing.js"
+import { createCB, fillcardb, filtering, downData } from "./functions.js"
 
+
+const data = await downData();
 
 const fragment = document.createDocumentFragment();
 const template = document.querySelector('#card-tpl').content; //template card
@@ -21,7 +23,7 @@ insearch.addEventListener('input', () => {
     txtinput = insearch.value.toLowerCase();
 
     let hetFilter = filtering(futureEvents, txtinput);
-    fillcardb(hetFilter);
+    fillcardb(hetFilter,template);
 
 });
 
@@ -29,12 +31,12 @@ insearch.addEventListener('input', () => {
 fcheck.addEventListener('change', () => {
 
     let chksfilter = filtering(futureEvents, txtinput);
-    fillcardb(chksfilter);
+    fillcardb(chksfilter,template);
 });
 
 let paso = "./assets/pages/details.html?id=" ;
 createCB(futureEvents, fcheck);
-fillcardb(futureEvents);
+fillcardb(futureEvents,template);
 
 
 
