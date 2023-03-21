@@ -139,11 +139,15 @@ svg text {
 
 
 td {
-    padding: .1rem;
+    
+    text-align: center;
+    font-weight: bolder;
+    font-style: italic;
+    color: #33045ff8;
 }
 
 tr {
-    border: 1px solid rgb(136, 5, 44);
+    border: 1px solid rgb(102, 7, 35);
     padding: 1px;
 }
 
@@ -158,6 +162,7 @@ tblStat {
 .table {
     table-layout: fixed;
     font-size: 1rem;
+    background-color: rgb(143, 135, 185);
 }
 
 .table>caption {

@@ -5,8 +5,8 @@ async function downData() {
         .then(data => {
             return data;
         })
-        
-    return data    
+        .catch((error) => console.log(error))
+    return data
 }
 
 function searchChk(array) {
@@ -32,15 +32,108 @@ function searchChk(array) {
 
 
 function searchInput(array, word) {
-   
+
     let hetFilter = array.filter(ep => ep.name.toLowerCase().includes(word));
-    
+
     return hetFilter;
 }
 
+
+function getCategory(array) {
+
+
+    //let matarray = array.map(cat => (cat.category));
+    let matrray = [];
+    matrray = array.map(cat => {
+        let gana = {
+            "category": cat.category,
+            "revenue": cat.price * (cat.estimate?cat.estimate:cat.assistance),
+            "capacity": cat.capacity,
+            "assist": cat.estimate? cat.estimate : cat.assistance
+        };
+        return gana;
+    })
+
+    let tmpcateg = '';
+    let tmprevenue = 0;
+    let tmpc=0;
+    let tmpq=0;
+    let matarray = [];
+    
+    let puntero = 0;
+    let items = 0;
+
+    matrray.sort((x,y)=> {
+        if (x.category < y.category){
+            return -1;
+        }
+        if (x.category > y.category){
+            return 1;
+        }
+
+        return 0;
+    });
+
+
+    matrray.forEach(item => {
+
+        if (tmpcateg !== item.category) {
+            tmpcateg = item.category;
+            puntero ++;
+            items = 1;
+            let subtotal = {
+                "category": tmpcateg,
+                "revenue": item.revenue,
+                "quant": item.capacity,
+                "calculate": item.assist,
+                "items": items
+            };
+            
+            matarray.push(subtotal);
+            tmprevenue = item.revenue; 
+            tmpc = item.capacity;
+            tmpq = item.assist;
+
+            console.log(tmpcateg);
+        }else{
+            tmprevenue += item.revenue;
+            tmpc += item.capacity;
+            tmpq += item.assist;
+            items ++;
+            matarray[puntero-1].revenue = tmprevenue;
+            matarray[puntero-1].quant = tmpc;
+            matarray[puntero-1].calculate = tmpq;
+            matarray[puntero-1].items = items;
+            
+        }
+        console.log(tmprevenue);
+
+    })
+
+    let category = matarray
+    
+   /*  category.sort((x,y)=> {
+        if (x.category < y.category){
+            return -1;
+        }
+        if (x.category > y.category){
+            return 1;
+        }
+
+        return 0;
+    }); */
+
+    console.table(matrray);
+    console.log(matarray);
+    console.table(category);
+
+    return category;
+}
+
+
 function createCB(array, contiene) {
 
-    
+
     const pltcategory = document.querySelector("#tplcat").content; //template checkbox
     const fragcheck = document.createDocumentFragment();
 
@@ -95,7 +188,7 @@ function fillcard(arrayfill, template) {
     contcard.appendChild(fragment);
 }
 
-function fillcardb(arrayfill,template) {
+function fillcardb(arrayfill, template) {
     //const template = document.querySelector('#card-tpl').content;
     let contcard = document.querySelector("#cardMain");
     if (arrayfill.length == 0) {
@@ -146,4 +239,4 @@ function filtering(arrayhome, texto) {
 
 }
 
-export { searchChk, searchInput, createCB, fillcard, fillcardb, filtering, downData }
+export { searchChk, searchInput, createCB, fillcard, fillcardb, filtering, downData, getCategory }
