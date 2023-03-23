@@ -1,5 +1,5 @@
 //import data from "./amazing.js"
-import { createCB, fillcardb, filtering, downData } from "./functions.js"
+import { createCB, fillcardb, crossfilter, downData } from "./functions.js"
 
 
 const data = await downData();
@@ -22,7 +22,7 @@ insearch.addEventListener('input', () => {
 
     txtinput = insearch.value.toLowerCase();
 
-    let hetFilter = filtering(futureEvents, txtinput);
+    let hetFilter = crossfilter(futureEvents, txtinput);
     fillcardb(hetFilter,template);
 
 });
@@ -30,7 +30,7 @@ insearch.addEventListener('input', () => {
 
 fcheck.addEventListener('change', () => {
 
-    let chksfilter = filtering(futureEvents, txtinput);
+    let chksfilter = crossfilter(futureEvents, txtinput);
     fillcardb(chksfilter,template);
 });
 

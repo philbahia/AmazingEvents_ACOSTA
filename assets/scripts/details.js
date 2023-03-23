@@ -1,4 +1,3 @@
-//import data from "./amazing.js";
 import { downData } from "./functions.js";
 
 

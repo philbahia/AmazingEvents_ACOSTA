@@ -1,4 +1,6 @@
-
+/*function downData
+Obtener datos en forma asincronica
+*/
 async function downData() {
     let data = await fetch("/assets/data/amazing.json")
         .then(response => response.json())
@@ -9,10 +11,13 @@ async function downData() {
     return data
 }
 
+/*function searchChk
+Filtra Array por categorias seleccionados x chkbox
+array: Array de Eventos
+return => Array de Eventos filtrado x categoria
+*/
 function searchChk(array) {
 
-    console.log("entrada al search<<<<")
-    console.log(array);
     let checkbox = document.querySelectorAll(".form-check-input");
     const boxchk = document.querySelector(".form-check");
     let arrchk = Array.from(checkbox);
@@ -20,8 +25,6 @@ function searchChk(array) {
     let aarrchks = arrchks.map(chk => chk.value)
     let chksfilter = array.filter(element => aarrchks.includes(element.category));
 
-    console.log("Salida filtro check");
-    console.log(chksfilter);
 
     if (aarrchks.length > 0) {
         return chksfilter;
@@ -30,7 +33,12 @@ function searchChk(array) {
 
 }
 
-
+/*function searchInput
+Filtra Array por texto del input
+array: Array de Eventos
+word: texto ingresado en el input
+return => Array Eventos filtrado por texto
+*/
 function searchInput(array, word) {
 
     let hetFilter = array.filter(ep => ep.name.toLowerCase().includes(word));
@@ -42,32 +50,31 @@ function searchInput(array, word) {
 function getCategory(array) {
 
 
-    //let matarray = array.map(cat => (cat.category));
     let matrray = [];
     matrray = array.map(cat => {
         let gana = {
             "category": cat.category,
-            "revenue": cat.price * (cat.estimate?cat.estimate:cat.assistance),
+            "revenue": cat.price * (cat.estimate ? cat.estimate : cat.assistance),
             "capacity": cat.capacity,
-            "assist": cat.estimate? cat.estimate : cat.assistance
+            "assist": cat.estimate ? cat.estimate : cat.assistance
         };
         return gana;
     })
 
     let tmpcateg = '';
     let tmprevenue = 0;
-    let tmpc=0;
-    let tmpq=0;
+    let tmpc = 0;
+    let tmpq = 0;
     let matarray = [];
-    
+
     let puntero = 0;
     let items = 0;
 
-    matrray.sort((x,y)=> {
-        if (x.category < y.category){
+    matrray.sort((x, y) => {
+        if (x.category < y.category) {
             return -1;
         }
-        if (x.category > y.category){
+        if (x.category > y.category) {
             return 1;
         }
 
@@ -79,7 +86,7 @@ function getCategory(array) {
 
         if (tmpcateg !== item.category) {
             tmpcateg = item.category;
-            puntero ++;
+            puntero++;
             items = 1;
             let subtotal = {
                 "category": tmpcateg,
@@ -88,49 +95,37 @@ function getCategory(array) {
                 "calculate": item.assist,
                 "items": items
             };
-            
+
             matarray.push(subtotal);
-            tmprevenue = item.revenue; 
+            tmprevenue = item.revenue;
             tmpc = item.capacity;
             tmpq = item.assist;
 
             console.log(tmpcateg);
-        }else{
+        } else {
             tmprevenue += item.revenue;
             tmpc += item.capacity;
             tmpq += item.assist;
-            items ++;
-            matarray[puntero-1].revenue = tmprevenue;
-            matarray[puntero-1].quant = tmpc;
-            matarray[puntero-1].calculate = tmpq;
-            matarray[puntero-1].items = items;
-            
+            items++;
+            matarray[puntero - 1].revenue = tmprevenue;
+            matarray[puntero - 1].quant = tmpc;
+            matarray[puntero - 1].calculate = tmpq;
+            matarray[puntero - 1].items = items;
+
         }
         console.log(tmprevenue);
 
     })
 
-    let category = matarray
-    
-   /*  category.sort((x,y)=> {
-        if (x.category < y.category){
-            return -1;
-        }
-        if (x.category > y.category){
-            return 1;
-        }
 
-        return 0;
-    }); */
-
-    console.table(matrray);
-    console.log(matarray);
-    console.table(category);
-
-    return category;
+    return matarray;
 }
 
-
+/*function createCB
+Genera y dibuja categorias en checkbox
+array: Array de Eventos
+contiene: container Checkbox
+*/
 function createCB(array, contiene) {
 
 
@@ -158,7 +153,7 @@ function createCB(array, contiene) {
 }
 
 function fillcard(arrayfill, template) {
-    //const template = document.querySelector('#card-tpl').content;
+
     const contcard = document.querySelector("#cardMain");
 
     if (arrayfill.length == 0) {
@@ -189,10 +184,9 @@ function fillcard(arrayfill, template) {
 }
 
 function fillcardb(arrayfill, template) {
-    //const template = document.querySelector('#card-tpl').content;
+
     let contcard = document.querySelector("#cardMain");
     if (arrayfill.length == 0) {
-        console.log("no coincidencias")
         contcard.innerHTML = `<div class="message p-2"><h3 class="border p-2 fw-bolder text-primary-emphasis text-center">There is no match</h3>
         <h2 class="border text-center text-primary"> Please refine your search</h2></div>`
         return
@@ -218,25 +212,41 @@ function fillcardb(arrayfill, template) {
     contcard.appendChild(fragment);
 }
 
-function filtering(arrayhome, texto) {
-    console.log("ahome");
-    console.log(arrayhome);
-
+/*function crossfilter
+Realiza filtro cruzado entre filtro por texto y filtro x categoria
+arrayhome: Array de Eventos
+texto: texto ingresado en inputbox
+return => Array de eventos filtrado
+*/
+function crossfilter(arrayhome, texto) {
     let filterA = searchInput(arrayhome, texto);
-
-    console.log("filerA>>>>");
-    console.log(filterA);
     let filterB = searchChk(filterA);
-    console.log("filerB>>>>");
-    console.log(filterB);
-
-    if (filterB.length == 0) {
-        // filterB = arrayhome
-    }
-
 
     return filterB;
+}
+
+/* function filltblC
+Dibuja tabla 2 y 3 del Stats
+array: Array de objetos a ser pintado
+contenedor: container HTML
+ */
+
+function filltblC(array, contenedor) {
+
+    //let contenedor = document.querySelector('.tblC');
+
+    let fila = '';
+    array.forEach(element => {
+        let porcentage = ((element.calculate / element.quant) * 100).toFixed(2);
+        fila += `<tr>
+                    <td>${element.category}  (${element.items}) </td>
+                    <td>$ ${element.revenue}</td>
+                    <td>${porcentage} %</td>
+                </tr>`;
+
+    });
+    contenedor.innerHTML = fila;
 
 }
 
-export { searchChk, searchInput, createCB, fillcard, fillcardb, filtering, downData, getCategory }
+export { searchChk, searchInput, createCB, fillcard, fillcardb, filltblC, crossfilter, downData, getCategory }
