@@ -1,4 +1,3 @@
-//import data from "./amazing.js"
 import { createCB, fillcardb, crossfilter, downData } from "./functions.js"
 
 
@@ -15,26 +14,20 @@ let txtinput = insearch.value.toLowerCase();
 let date_today = data.currentDate;
 const futureEvents = data.events.filter(ep => Date.parse(ep.date) > Date.parse(date_today));
 
-console.table(futureEvents);
-
 
 insearch.addEventListener('input', () => {
-
     txtinput = insearch.value.toLowerCase();
-
     let hetFilter = crossfilter(futureEvents, txtinput);
     fillcardb(hetFilter,template);
-
 });
 
 
 fcheck.addEventListener('change', () => {
-
     let chksfilter = crossfilter(futureEvents, txtinput);
     fillcardb(chksfilter,template);
 });
 
-let paso = "./assets/pages/details.html?id=" ;
+
 createCB(futureEvents, fcheck);
 fillcardb(futureEvents,template);
 

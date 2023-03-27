@@ -46,7 +46,11 @@ function searchInput(array, word) {
     return hetFilter;
 }
 
-
+/*function getCategory
+Genera nuevo array para totalizar por categorias
+array: Array de Eventos
+return => Array Eventos categorias totalizadas
+*/
 function getCategory(array) {
 
 
@@ -61,6 +65,8 @@ function getCategory(array) {
         return gana;
     })
 
+   
+
     let tmpcateg = '';
     let tmprevenue = 0;
     let tmpc = 0;
@@ -70,18 +76,9 @@ function getCategory(array) {
     let puntero = 0;
     let items = 0;
 
-    matrray.sort((x, y) => {
-        if (x.category < y.category) {
-            return -1;
-        }
-        if (x.category > y.category) {
-            return 1;
-        }
 
-        return 0;
-    });
-
-
+    matrray.sort((x, y) => x.category.localeCompare(y.category));
+   
     matrray.forEach(item => {
 
         if (tmpcateg !== item.category) {
@@ -113,11 +110,10 @@ function getCategory(array) {
             matarray[puntero - 1].items = items;
 
         }
-        console.log(tmprevenue);
+       
 
     })
-
-
+   
     return matarray;
 }
 
@@ -152,6 +148,12 @@ function createCB(array, contiene) {
 
 }
 
+
+/*fumction fillcard
+Pintar cards
+arrayfill: Array de eventos
+template: plantilla html
+*/
 function fillcard(arrayfill, template) {
 
     const contcard = document.querySelector("#cardMain");
@@ -164,8 +166,6 @@ function fillcard(arrayfill, template) {
     }
 
     const fragment = document.createDocumentFragment();
-
-
     contcard.innerHTML = '';
 
     arrayfill.forEach(event => {
@@ -183,6 +183,61 @@ function fillcard(arrayfill, template) {
     contcard.appendChild(fragment);
 }
 
+/*function firstTable
+Genera nuevo Array para visualizar topes de asistencia
+array: Array de Eventos
+*/
+function firstTable(array) {
+    let tmparray = [];
+
+    tmparray = array.map(item => {
+        let gana = {
+            name: item.name,
+            assist: (item.estimate ? item.estimate : item.assistance) / item.capacity * 100,
+            capacity: item.capacity
+        };
+        return gana;
+    })
+
+    tmparray.sort((x,y) => x.assist - y.assist);
+    
+    filltblA(tmparray);
+};
+
+
+/*function filltblA
+Pintar tabla 1
+tmparray: Array totalizados de eventos para primer tabla
+*/
+function filltblA(tmparray) {
+
+    console.log("1 Tabla");
+    console.table(tmparray);
+    console.log(tmparray);
+
+    let contenedor = document.querySelector('.tblA');
+    let fila = '';
+    let minuspercentage = tmparray[0].name;
+    let minusatt = tmparray[0].assist;
+    let pluspercentage = tmparray[tmparray.length - 1].name;
+    let plusatt = tmparray[tmparray.length - 1].assist;
+    let pluscapacity = tmparray.reduce((prev, current) => (prev.capacity > current.capacity) ? prev : current).name;
+
+    fila = `<tr>
+                <td>${pluspercentage} - (${plusatt} %)</td>
+                <td>${minuspercentage} - (${minusatt} %)</td>
+                <td>${pluscapacity} </td>
+            </tr>`;
+
+    contenedor.innerHTML = fila;
+
+}
+
+/*fumction fillcardb
+Pintar cards
+arrayfill: Array de eventos
+template: plantilla html
+*/
 function fillcardb(arrayfill, template) {
 
     let contcard = document.querySelector("#cardMain");
@@ -193,8 +248,6 @@ function fillcardb(arrayfill, template) {
     }
 
     let fragment = document.createDocumentFragment();
-
-
     contcard.innerHTML = '';
 
     arrayfill.forEach(event => {
@@ -230,10 +283,8 @@ Dibuja tabla 2 y 3 del Stats
 array: Array de objetos a ser pintado
 contenedor: container HTML
  */
-
 function filltblC(array, contenedor) {
 
-    //let contenedor = document.querySelector('.tblC');
 
     let fila = '';
     array.forEach(element => {
@@ -249,4 +300,4 @@ function filltblC(array, contenedor) {
 
 }
 
-export { searchChk, searchInput, createCB, fillcard, fillcardb, filltblC, crossfilter, downData, getCategory }
+export { searchChk, searchInput, createCB, fillcard, fillcardb, filltblC, crossfilter, downData, getCategory, firstTable }

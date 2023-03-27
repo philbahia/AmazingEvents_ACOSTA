@@ -1,4 +1,3 @@
-//import data from "./amazing.js"
 import { createCB, fillcardb, crossfilter, downData } from "./functions.js"
 
 const data = await downData();
@@ -16,16 +15,13 @@ const pastEvents = data.events.filter(ep => Date.parse(ep.date) < Date.parse(dat
 
 
 insearch.addEventListener('input', () => {
-
     txtinput = insearch.value.toLowerCase();
     let hetFilter = crossfilter(pastEvents, txtinput);
     fillcardb(hetFilter, template);
-
 });
 
 
 fcheck.addEventListener('change', () => {
-
     let chksfilter = crossfilter(pastEvents, txtinput);
     fillcardb(chksfilter,template);
 });

@@ -1,4 +1,3 @@
-//import data from "./amazing.js"
 import { createCB, fillcard, crossfilter, downData } from "./functions.js"
 
 
@@ -18,19 +17,14 @@ const homeEvents = data.events;
 
 
 
-
 insearch.addEventListener('keyup', () => {
-
     txtinput = insearch.value.toLowerCase();
-
     let hetFilter = crossfilter(homeEvents, txtinput);
     fillcard(hetFilter, template);
-
 });
 
 
 fcheck.addEventListener('change', () => {
-
     let chksfilter = crossfilter(homeEvents, txtinput);
     fillcard(chksfilter,template);
 });

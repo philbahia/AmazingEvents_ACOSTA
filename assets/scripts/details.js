@@ -5,10 +5,8 @@ let data = await downData();
 
 
 let date_today = data.currentDate;
-//let { events } = data;
 const detailEvents = data.events;
 
-console.log(detailEvents);
 let queryString = location.search;
 let params = new URLSearchParams(queryString);
 
@@ -24,6 +22,8 @@ document.querySelector(".card-title").textContent = ficha.name;
 const lista = document.querySelector("#detail-li");
 const templat = document.querySelector("#tpl-li").content;
 const fragment = document.createDocumentFragment();
+
+
 
 Object.entries(fichas).forEach(([key, value]) => {
 
